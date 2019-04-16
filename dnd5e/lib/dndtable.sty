@@ -1,0 +1,22 @@
+% Table Header
+\newcommand{\header}[1]{{
+  \par\vspace*{8pt}
+  \noindent
+  \dnd@TableTitleFont
+  #1}}
+
+% Centered Column
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% Table Environment
+\NewDocumentEnvironment{dndtable}{O{XX} O{tablecolor}}{%
+    \par\vspace*{8pt}
+    \noindent
+    \dnd@TableBodyFont
+    \rowcolors{1}{}{#2}
+    \tabularx{\linewidth}{#1}
+  }{%
+    \endtabularx
+    \vspace{8pt plus 1pt}
+    \noindent
+  }
