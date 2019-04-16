@@ -31,7 +31,7 @@ for file in $(find . -type f -follow -name '*.tex')
     else
       echo "Compiling $file."
 
-      pdflatex $file -o $pdfname
+      pdflatex $file
 
       if [ -f "$filename.pdf" ]; then
         # Only attempt moving pdf, if it exists
