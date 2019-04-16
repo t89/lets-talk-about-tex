@@ -24,7 +24,7 @@ for file in $(find . -type f -follow -name '*.tex')
     pdfname="${path_prefix/\//-}-$filename.pdf"
     pdf_path="$path/$filename.pdf"
 
-    if [ -f "$PWD/$pdfname" ]; then
+    if [ -f "$PWD/samples/$pdfname" ]; then
       # Corresponding PDF already exists
       echo "$pdfname already exists. Skipping."
 
