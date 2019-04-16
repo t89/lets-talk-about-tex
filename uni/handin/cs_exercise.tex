@@ -1,0 +1,116 @@
+% Computer science, Datastructures & Algorithms handin with pseudocode samples
+% Test
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+
+% Pseudocode
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\setlength{\parindent}{0in}
+
+\newcommand{\uebungsGruppe}{1}
+\newcommand{\zettelNummer}{1}
+\newcommand{\studierenderEins}{Rick Sanchez (71-5097-2)}
+\newcommand{\studierenderZwei}{Morty Smith  (C-137)}
+\newcommand{\studierenderDrei}{Squanchy (X)}
+
+\newcounter{AufgabenCounter}
+\setcounter{AufgabenCounter}{1}
+\newcounter{TeilaufgabenCounter}
+\newenvironment{aufgabe}{\section*{Aufgabe \theAufgabenCounter}\setcounter{TeilaufgabenCounter}{1}}{\stepcounter{AufgabenCounter}}
+\newenvironment{teilaufgabe}{\paragraph*{\alph{TeilaufgabenCounter})}}{\stepcounter{TeilaufgabenCounter}}
+
+\renewcommand{\to}{\textnormal{ to }}
+\newcommand{\bigO}{\mathcal{O}}
+
+\begin{document}
+
+\title{Datenstrukturen und Algorithmen \\ Heimübung \zettelNummer{}}
+\author{\studierenderEins{} \\
+    \studierenderZwei{} \\
+    \studierenderDrei{}}
+
+\maketitle
+
+% Aufgabe 1
+\begin{aufgabe}
+
+    % Teilaufgabe a)
+    \begin{teilaufgabe}
+
+        Wir haben den folgenden Algorithmus entworfen:
+
+        \begin{algorithm}[H]
+            \caption{FindeGrößtesElementFor($A[1, \dots, n]$)}
+            \begin{algorithmic}[1]
+                \State Ergebnis $\gets 0$ 
+                \For{$i \gets 1 \to n$} 
+                    \If{$A[i] \geq$ Ergebnis}
+                        \State Ergebnis $\gets A[i]$
+                    \EndIf
+                \EndFor
+                \State \textbf{Return} Ergebnis
+            \end{algorithmic}
+        \end{algorithm}
+
+        Alternativ haben wir den folgenden äquivalenten Algorithmus entworfen:
+
+        \begin{algorithm}[H]
+            \caption{FindeGrößtesElementFor($A[1, \dots, n]$)}
+            \begin{algorithmic}[1]
+                \State Ergebnis $\gets 0$ 
+                \State $i \gets 1$
+                \While{$i \leq n$} 
+                    \If{$A[i] \geq$ Ergebnis}
+                        \State Ergebnis $\gets A[i]$
+                    \EndIf
+                    \State $i \gets i+1$
+                \EndWhile
+                \State \textbf{Return} Ergebnis
+            \end{algorithmic}
+        \end{algorithm}
+
+    \end{teilaufgabe}
+
+    % Teilaufgabe b)
+    \begin{teilaufgabe}
+        Im ersten Algorithmus haben wir eine Zuweisung in Zeile $1$ und in Zeilen $3-4$ der For-Schleife einen Vergleich und eine Zuweisung. 
+        Die For-Schleife wird $n$ mal durchlaufen.
+        Damit ergibt sich eine Gesamtlaufzeit von $\bigO(n)$.
+
+        Der zweite Algorithmus hat $2$ Zuweisungen außerhalb der While-Schleife und $2$ Zuweisungen, einen Vergleich und eine Addition innerhalb der While-Schleife in Zeilen $4-7$.
+        Da auch die While-Schleife maximal $n$ mal durchlaufen wird, ergibt sich eine Laufzeit von $\bigO(n)$.
+    \end{teilaufgabe}
+
+\end{aufgabe}
+
+% Aufgabe 2
+\begin{aufgabe}
+
+    % Teilaufgabe a)
+    \begin{teilaufgabe}
+        Es gilt ...
+    \end{teilaufgabe}
+
+    % Teilaufgabe b)
+    \begin{teilaufgabe}
+        Hier können wir das in der Vorlesung gezeigte Theorem anwenden und erhalten ...
+    \end{teilaufgabe}
+
+    % Teilaufgabe c)
+    \begin{teilaufgabe}
+        Ein Gegenbeispiel konstruiert sich wie folgt. ...
+    \end{teilaufgabe}
+
+\end{aufgabe}
+
+% Aufgabe 3
+\begin{aufgabe}
+    Für Sortieren haben wir gelernt, dass ...
+\end{aufgabe}
+
+\end{document}
