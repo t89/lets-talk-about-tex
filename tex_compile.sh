@@ -35,7 +35,7 @@ for file in $(find . -type f -follow -name '*.tex')
 
       if [ -f "$filename.pdf" ]; then
         # Only attempt moving pdf, if it exists
-        mv "$filename.pdf" "$PWD/$pdfname"
+        mv "$filename.pdf" "$PWD/samples/$pdfname"
 
       else
         echo "Attempted to move $filename.pdf. Non-existant. Check for LaTeX errors."
