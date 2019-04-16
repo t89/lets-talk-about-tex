@@ -1,2 +1,3 @@
-# lets-talk-about-tex-maybe
-Collection of Latex Templates
+# Let's Talk About Tex, Baby!
+
+Collection of my LaTeX and markdown templates.
